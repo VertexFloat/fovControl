@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<GUIProfiles>
+	<Profile name='fovDialogBg' extends='colorDialogBg'>
+		<Value name='size' value='498px 234px'/>
+	</Profile>
+
+	<Profile name='multiTextOptionFov' extends='multiTextOption' with='anchorMiddleCenter'>
+		<Value name='size' value='408px 48px'/>
+		<Value name='position' value='0 40px'/>
+	</Profile>
+
+	<Profile name='multiTextOptionBgFov' extends='multiTextOptionBg'>
+		<Value name='size' value='312px 48px'/>
+	</Profile>
+
+	<Profile name='fovDialogResetButton' extends='ingameMenuSettingsNativeHelpButton' with='anchorMiddleCenter'>
+		<Value name='size' value='408px 48px'/>
+		<Value name='position' value='0 -40px'/>
+		<Value name='textResizeWidth' value='200px'/>
+		<Value name='handleFocus' value='false'/>
+		<Value name='iconUVs' value='0px 0px 48px 48px'/>
+		<Value name='iconFilename' value='g_fovControlUIElements'/>
+	</Profile>
+</GUIProfiles>
