@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="72">
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<modDesc descVersion='72'>
 	<author>VertexFloat</author>
 	<version>1.0.0.0</version>
 	<title>
@@ -8,57 +8,57 @@
 		<pl>Kontrola Pola Widzenia</pl>
 	</title>
 	<iconFilename>icon.png</iconFilename>
-	<multiplayer supported="true"/>
+	<multiplayer supported='true'/>
 
 	<description>
 <en>
 <![CDATA[Thanks to this simple modification, you can set the field of view for the currently used vehicle camera.
 
-Opening Fov Controller - key combination "left shift + z" (default)
+Opening Fov Controller - key combination 'left shift + z' (default)
 
-For more information, help, and report issues please visit <a href="https://github.com/4c65736975/FS22_FovControl">GitHub</a>.
+For more information, help, and report issues please visit <a href='https://github.com/4c65736975/FS22_FovControl'>GitHub</a>.
 ]]>
 </en>
 <de>
 <![CDATA[Dank dieser einfachen Modifikation können Sie das Sichtfeld für die aktuell verwendete Fahrzeugkamera einstellen.
 
-Öffnen des Fov-Controllers - Tastenkombination "linke Umschalttaste + z" (Standard)
+Öffnen des Fov-Controllers - Tastenkombination 'linke Umschalttaste + z' (Standard)
 
-Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href="https://github.com/4c65736975/FS22_FovControl">GitHub</a>.
+Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/FS22_FovControl'>GitHub</a>.
 ]]>
 </de>
 <pl>
 <![CDATA[Dzięki tej prostej modyfikacji, możesz ustawić pole widzenia dla aktualnie używanej kamery pojazdu.
 
-Otworzenie kontrolera pola widzenia - kombinacja klawiszy "lewy shift + z" (domyślnie)
+Otworzenie kontrolera pola widzenia - kombinacja klawiszy 'lewy shift + z' (domyślnie)
 
-Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href="https://github.com/4c65736975/FS22_FovControl">GitHub</a>.
+Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/FS22_FovControl'>GitHub</a>.
 ]]>
 </pl>
 	</description>
 
 	<l10n>
-		<text name="title_fovDialog">
+		<text name='title_fovDialog'>
 			<en>Fov Control</en>
 			<de>Fov-Steuerung</de>
 			<pl>Kontrola Pola Widzenia</pl>
 		</text>
-		<text name="button_remove_background">
+		<text name='button_remove_background'>
 			<en>Remove background</en>
 			<de>Hintergrund entfernen</de>
 			<pl>Usuń tło</pl>
 		</text>
-		<text name="button_add_background">
+		<text name='button_add_background'>
 			<en>Add background</en>
 			<de>Hintergrund hinzufügen</de>
 			<pl>Dodaj tło</pl>
 		</text>
-		<text name="input_TOGGLE_FOV_CONTROL">
+		<text name='input_TOGGLE_FOV_CONTROL'>
 			<en>Open Fov control</en>
 			<de>Öffnen Sie die Fov-Steuerung</de>
 			<pl>Otwórz kontrolę pola widzenia</pl>
 		</text>
-		<text name="action_openFovControl">
+		<text name='action_openFovControl'>
 			<en>Open Fov control</en>
 			<de>Öffnen Sie die Fov-Steuerung</de>
 			<pl>Otwórz kontrolę pola widzenia</pl>
@@ -66,16 +66,16 @@ Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href="
 	</l10n>
 
 	<inputBinding>
-		<actionBinding action="TOGGLE_FOV_CONTROL">
-			<binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_z"/>
+		<actionBinding action='TOGGLE_FOV_CONTROL'>
+			<binding device='KB_MOUSE_DEFAULT' input='KEY_lshift KEY_z'/>
 		</actionBinding>
 	</inputBinding>
 
 	<actions>
-		<action name="TOGGLE_FOV_CONTROL"/>
+		<action name='TOGGLE_FOV_CONTROL'/>
 	</actions>
 
 	<extraSourceFiles>
-		<sourceFile filename="src/FovControl.lua"/>
+		<sourceFile filename='src/FovControl.lua'/>
 	</extraSourceFiles>
 </modDesc>
