@@ -48,6 +48,7 @@
 <img src='screenshots/screenShot (1).png' alt='screenshot'>
 
 Thanks to this simple modification, you can set the field of view for the currently used vehicle camera.
+<br/>
 Opening Fov Controller - key combination 'left shift + z' (default)
 
 <p align="right">&#x2191 <a href="#top">back to top</a></p>
