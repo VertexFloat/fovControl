@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' standalone='no'?>
-<modDesc descVersion='72'>
+<modDesc descVersion='73'>
 	<author>VertexFloat</author>
-	<version>1.0.0.0</version>
+	<version>1.0.0.1</version>
 	<title>
 		<en>Fov Control</en>
 		<de>Fov-Steuerung</de>
@@ -16,6 +16,9 @@
 
 Opening Fov Controller - key combination 'left shift + z' (default)
 
+Changelog (1.0.0.1) :
+- descVersion updated
+
 For more information, help, and report issues please visit <a href='https://github.com/4c65736975/fovControl'>GitHub</a>.
 ]]>
 </en>
@@ -24,6 +27,9 @@ For more information, help, and report issues please visit <a href='https://gith
 
 Öffnen des Fov-Controllers - Tastenkombination 'linke Umschalttaste + z' (Standard)
 
+Änderungsprotokoll (1.0.0.1) :
+- DescVersion aktualisiert
+
 Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/fovControl'>GitHub</a>.
 ]]>
 </de>
@@ -31,6 +37,9 @@ Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https
 <![CDATA[Dzięki tej prostej modyfikacji, możesz ustawić pole widzenia dla aktualnie używanej kamery pojazdu.
 
 Otworzenie kontrolera pola widzenia - kombinacja klawiszy 'lewy shift + z' (domyślnie)
+
+Dziennik zmian (1.0.0.1) :
+- zaktualizowano descVersion
 
 Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/fovControl'>GitHub</a>.
 ]]>
