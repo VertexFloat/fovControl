@@ -1,30 +1,30 @@
-<?xml version='1.0' encoding='utf-8' standalone='no'?>
-<GUI onOpen='onOpen' onClose='onClose' onCreate='onCreate'>
-	<GuiElement type='empty' profile='newLayer'/>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+  <GuiElement type="empty" profile="newLayer"/>
 
-	<GuiElement type='bitmap' profile='dialogFullscreenBg' id='bgElement'>
-		<GuiElement type='bitmap' profile='bgVignette'/>
-		<GuiElement type='bitmap' profile='bgGlowDialog'/>
-	</GuiElement>
+  <GuiElement type="bitmap" profile="dialogFullscreenBg" id="bgElement">
+    <GuiElement type="bitmap" profile="bgVignette"/>
+    <GuiElement type="bitmap" profile="bgGlowDialog"/>
+  </GuiElement>
 
-	<GuiElement type='bitmap' profile='fovDialogBg' id='dialogElement'>
-		<GuiElement type='bitmap' profile='dialogHeaderDocked'>
-			<GuiElement type='text' profile='dialogHeaderText' text='$l10n_title_fovDialog' id='dialogTitleElement'/>
-		</GuiElement>
+  <GuiElement type="bitmap" profile="fovDialogBg" id="dialogElement">
+    <GuiElement type="bitmap" profile="dialogHeaderDocked">
+      <GuiElement type="text" profile="dialogHeaderText" text="$l10n_ui_fovDialogTitle" id="dialogTitleElement"/>
+    </GuiElement>
 
-		<GuiElement type='multiTextOption' profile='multiTextOptionFov' onClick='onClickFovValue' id='fovElement' focusInit='onOpen' handleFocus='true'>
-			<GuiElement type='button' profile='multiTextOptionLeft'/>
-			<GuiElement type='button' profile='multiTextOptionRight'/>
-			<GuiElement type='text' profile='multiTextOptionText'/>
-			<GuiElement type='bitmap' profile='multiTextOptionBgFov'/>
-		</GuiElement>
+    <GuiElement type="multiTextOption" profile="multiTextOptionFov" onClick="onClickFovValue" id="fovElement" focusInit="onOpen" handleFocus="true">
+      <GuiElement type="button" profile="multiTextOptionLeft"/>
+      <GuiElement type="button" profile="multiTextOptionRight"/>
+      <GuiElement type="text" profile="multiTextOptionText"/>
+      <GuiElement type="bitmap" profile="multiTextOptionBgFov"/>
+    </GuiElement>
 
-		<GuiElement type='button' profile='fovDialogResetButton' text='$l10n_button_reset' onClick='onClickResetFov'/>
+    <GuiElement type="button" profile="fovDialogResetButton" text="$l10n_button_reset" onClick="onClickResetFov"/>
 
-		<GuiElement type='flowLayout' profile='buttonBoxDialog'>
-			<GuiElement type='button' profile='buttonOK' text='$l10n_button_apply' onClick='onClickApply'/>
-			<GuiElement type='button' profile='buttonExtra1' text='$l10n_button_remove_background' onClick='onClickRemoveBackground' id='btnRemoveBgElement'/>
-			<GuiElement type='button' profile='buttonBack' text='$l10n_button_back' onClick='onClickBack'/>
-		</GuiElement>
-	</GuiElement>
+    <GuiElement type="flowLayout" profile="buttonBoxDialog">
+      <GuiElement type="button" profile="buttonOK" text="$l10n_button_apply" onClick="onClickApply"/>
+      <GuiElement type="button" profile="buttonExtra1" text="$l10n_button_removeBackground" onClick="onClickRemoveBackground" id="btnRemoveBgElement"/>
+      <GuiElement type="button" profile="buttonBack" text="$l10n_button_back" onClick="onClickBack"/>
+    </GuiElement>
+  </GuiElement>
 </GUI>

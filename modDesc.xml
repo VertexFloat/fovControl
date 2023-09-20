@@ -1,110 +1,102 @@
-<?xml version='1.0' encoding='utf-8' standalone='no'?>
-<modDesc descVersion='74'>
-	<author>VertexFloat</author>
-	<version>1.0.0.2</version>
-	<title>
-		<en>Fov Control</en>
-		<de>Fov-Steuerung</de>
-		<fr>Contrôle Du Champ De Vision</fr>
-		<pl>Kontrola Pola Widzenia</pl>
-	</title>
-	<description>
-		<en><![CDATA[Thanks to this simple modification, you can set the field of view for the currently used vehicle camera.
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="77">
+  <author>VertexFloat</author>
+  <version>1.0.0.3</version>
+  <title>
+    <en>Fov Control</en>
+    <de>Fov-Steuerung</de>
+    <fr>Contrôle Du Champ De Vision</fr>
+    <pl>Kontrola Pola Widzenia</pl>
+  </title>
+  <description>
+    <en><![CDATA[Thanks to this simple modification, you can set the field of view for the currently used vehicle camera.
 
-Opening Fov Controller - key combination 'left shift + z' (default)
+Opening Fov Controller - key combination "left shift + z" (default)
 
-Changelog (1.0.0.1):
+Changelog (1.0.0.3):
+- removed unnecessary code
 - descVersion updated
+- cleaned code
 
-Changelog (1.0.0.2):
-- descVersion updated
-- improved code
+For more information, full changelog, help, and report issues please visit <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></en>
+    <de><![CDATA[Dank dieser einfachen Modifikation können Sie das Sichtfeld für die aktuell verwendete Fahrzeugkamera einstellen.
 
-For more information, help, and report issues please visit <a href='https://github.com/4c65736975/fovControl'>GitHub</a>.]]></en>
-		<de><![CDATA[Dank dieser einfachen Modifikation können Sie das Sichtfeld für die aktuell verwendete Fahrzeugkamera einstellen.
+Öffnen des Fov-Controllers - Tastenkombination "linke Umschalttaste + z" (Standard)
 
-Öffnen des Fov-Controllers - Tastenkombination 'linke Umschalttaste + z' (Standard)
+Änderungsprotokoll (1.0.0.3):
+- Unnötigen Code entfernt
+- descVersion aktualisiert
+- Bereinigter Code
 
-Änderungsprotokoll (1.0.0.1):
-- DescVersion aktualisiert
+Weitere Informationen, ein vollständiges Änderungsprotokoll, Hilfe und das Melden von Problemen finden Sie unter <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></de>
+    <fr><![CDATA[Grâce à cette simple modification, vous pouvez définir le champ de vision de la caméra du véhicule actuellement utilisée.
 
-Änderungsprotokoll (1.0.0.2):
-- DescVersion aktualisiert
-- verbesserter Code
+Ouverture du contrôleur FOV - combinaison de touches "shift gauche + z" (par défaut)
 
-Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/fovControl'>GitHub</a>.]]></de>
-		<fr><![CDATA[Grâce à cette simple modification, vous pouvez définir le champ de vision de la caméra du véhicule actuellement utilisée.
-
-Ouverture du contrôleur FOV - combinaison de touches 'shift gauche + z' (par défaut)
-
-Journal des modifications (1.0.0.1):
+Journal des modifications (1.0.0.3):
+- supprimé le code inutile
 - descVersion mise à jour
+- code nettoyé
 
-Journal des modifications (1.0.0.2):
-- descVersion mise à jour
-- code amélioré
+Pour plus d'informations, le journal des modifications complet, l'aide et signaler des problèmes, veuillez visiter <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></fr>
+    <pl><![CDATA[Dzięki tej prostej modyfikacji, możesz ustawić pole widzenia dla aktualnie używanej kamery pojazdu.
 
-Pour plus d'informations, de l'aide et signaler des problèmes, veuillez visiter <a href='https://github.com/4c65736975/fovControl'>GitHub</a>.]]></fr>
-		<pl><![CDATA[Dzięki tej prostej modyfikacji, możesz ustawić pole widzenia dla aktualnie używanej kamery pojazdu.
+Otworzenie kontrolera pola widzenia - kombinacja klawiszy "lewy shift + z" (domyślnie)
 
-Otworzenie kontrolera pola widzenia - kombinacja klawiszy 'lewy shift + z' (domyślnie)
-
-Dziennik zmian (1.0.0.1):
+Dziennik zmian (1.0.0.3):
+- usunięto niepotrzebny kod
 - zaktualizowano descVersion
+- oczyszczono kod
 
-Dziennik zmian (1.0.0.2):
-- zaktualizowano descVersion
-- ulepszony kod
+Po więcej informacji, pełny dziennik zmian, pomoc lub zgłoszenie błędu, odwiedź stronę <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></pl>
+  </description>
+  <iconFilename>icon_fovControl.png</iconFilename>
+  <multiplayer supported="true"/>
 
-Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/fovControl'>GitHub</a>.]]></pl>
-	</description>
-	<iconFilename>icon_fovControl.png</iconFilename>
-	<multiplayer supported='true'/>
+  <l10n>
+    <text name="ui_fovDialogTitle">
+      <en>Fov Control</en>
+      <de>Fov-Steuerung</de>
+      <fr>Contrôle Du Champ De Vision</fr>
+      <pl>Kontrola Pola Widzenia</pl>
+    </text>
+    <text name="button_addBackground">
+      <en>Add background</en>
+      <de>Hintergrund hinzufügen</de>
+      <fr>Ajouter un arrière-plan</fr>
+      <pl>Dodaj tło</pl>
+    </text>
+    <text name="button_removeBackground">
+      <en>Remove background</en>
+      <de>Hintergrund entfernen</de>
+      <fr>Supprimer l'arrière-plan</fr>
+      <pl>Usuń tło</pl>
+    </text>
+    <text name="action_openFovControl">
+      <en>Open fov control</en>
+      <de>Öffnen Sie die Fov-Steuerung</de>
+      <fr>Ouvrir le contrôle Fov</fr>
+      <pl>Otwórz kontroler pola widzenia</pl>
+    </text>
+    <text name="input_TOGGLE_FOV_CONTROL">
+      <en>Open Fov control</en>
+      <de>Öffnen Sie die Fov-Steuerung</de>
+      <fr>Ouvrir le contrôle Fov</fr>
+      <pl>Otwórz kontrolę pola widzenia</pl>
+    </text>
+  </l10n>
 
-	<l10n>
-		<text name='title_fovDialog'>
-			<en>Fov Control</en>
-			<de>Fov-Steuerung</de>
-			<fr>Contrôle Du Champ De Vision</fr>
-			<pl>Kontrola Pola Widzenia</pl>
-		</text>
-		<text name='button_remove_background'>
-			<en>Remove background</en>
-			<de>Hintergrund entfernen</de>
-			<fr>Supprimer l'arrière-plan</fr>
-			<pl>Usuń tło</pl>
-		</text>
-		<text name='button_add_background'>
-			<en>Add background</en>
-			<de>Hintergrund hinzufügen</de>
-			<fr>Ajouter un arrière-plan</fr>
-			<pl>Dodaj tło</pl>
-		</text>
-		<text name='input_TOGGLE_FOV_CONTROL'>
-			<en>Open Fov control</en>
-			<de>Öffnen Sie die Fov-Steuerung</de>
-			<fr>Ouvrir le contrôle Fov</fr>
-			<pl>Otwórz kontrolę pola widzenia</pl>
-		</text>
-		<text name='action_openFovControl'>
-			<en>Open fov control</en>
-			<de>Öffnen Sie die Fov-Steuerung</de>
-			<fr>Ouvrir le contrôle Fov</fr>
-			<pl>Otwórz kontroler pola widzenia</pl>
-		</text>
-	</l10n>
+  <inputBinding>
+    <actionBinding action="TOGGLE_FOV_CONTROL">
+      <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_z"/>
+    </actionBinding>
+  </inputBinding>
 
-	<inputBinding>
-		<actionBinding action='TOGGLE_FOV_CONTROL'>
-			<binding device='KB_MOUSE_DEFAULT' input='KEY_lshift KEY_z'/>
-		</actionBinding>
-	</inputBinding>
+  <actions>
+    <action name="TOGGLE_FOV_CONTROL" category="VEHICLE" axisType="HALF"/>
+  </actions>
 
-	<actions>
-		<action name='TOGGLE_FOV_CONTROL' category='VEHICLE' axisType='HALF'/>
-	</actions>
-
-	<extraSourceFiles>
-		<sourceFile filename='src/FovControl.lua'/>
-	</extraSourceFiles>
+  <extraSourceFiles>
+    <sourceFile filename="src/FovControl.lua"/>
+  </extraSourceFiles>
 </modDesc>

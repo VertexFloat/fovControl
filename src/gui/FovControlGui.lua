@@ -6,11 +6,11 @@
 -- improved and cleaned code
 
 FovControlGui = {
-	MOD_DIRECTORY = g_currentModDirectory,
-	HUD_ATLAS_PATH = g_currentModDirectory .. 'data/menu/hud/ui_elements.png'
+  MOD_DIRECTORY = g_currentModDirectory,
+  HUD_ATLAS_PATH = g_currentModDirectory .. "data/menu/hud/ui_elements.png"
 }
 
-source(FovControlGui.MOD_DIRECTORY .. 'src/gui/dialogs/FovControlDialog.lua')
+source(FovControlGui.MOD_DIRECTORY .. "src/gui/dialogs/FovControlDialog.lua")
 
 local FovControlGui_mt = Class(FovControlGui)
 
@@ -20,30 +20,29 @@ local FovControlGui_mt = Class(FovControlGui)
 ---@param settingsModel table settingsModel object
 ---@return table instance instance of object
 function FovControlGui.new(customMt, gui, l10n, settingsModel)
-	local self = setmetatable({}, customMt or FovControlGui_mt)
+  local self = setmetatable({}, customMt or FovControlGui_mt)
 
-	self.gui = gui
-	self.l10n = l10n
-	self.fovControlDialog = FovControlDialog.new(nil, customMt, l10n, settingsModel)
+  self.gui = gui
+  self.fovControlDialog = FovControlDialog.new(nil, customMt, l10n, settingsModel)
 
-	return self
+  return self
 end
 
 ---Initializing FovControlGui
 function FovControlGui:initialize()
-	self.gui:loadProfiles(FovControlGui.MOD_DIRECTORY .. 'data/gui/guiProfiles.xml')
+  self.gui:loadProfiles(FovControlGui.MOD_DIRECTORY .. "data/gui/guiProfiles.xml")
 
-	for _, profile in pairs(self.gui.profiles) do
-		for name, value in pairs(profile.values) do
-			if (name == 'imageFilename' or name == 'iconFilename') and value == 'g_fovControlUIElements' then
-				profile.values[name] = FovControlGui.HUD_ATLAS_PATH
-			end
-		end
-	end
+  for _, profile in pairs(self.gui.profiles) do
+    for name, value in pairs(profile.values) do
+      if (name == "imageFilename" or name == "iconFilename") and value == "g_fovControlUIElements" then
+        profile.values[name] = FovControlGui.HUD_ATLAS_PATH
+      end
+    end
+  end
 end
 
 ---Callback on map loading
 ---@param filename string map file path
 function FovControlGui:loadMap(filename)
-	self.gui:loadGui(Utils.getFilename('data/gui/dialogs/FovControlDialog.xml', FovControlGui.MOD_DIRECTORY), 'FovControlDialog', self.fovControlDialog)
+  self.gui:loadGui(Utils.getFilename("data/gui/dialogs/FovControlDialog.xml", FovControlGui.MOD_DIRECTORY), "FovControlDialog", self.fovControlDialog)
 end
