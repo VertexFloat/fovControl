@@ -1,5 +1,5 @@
 -- @author: 4c65736975, All Rights Reserved
--- @version: 1.0.0.2, 20|09|2023
+-- @version: 1.0.0.3, 25|01|2024
 -- @filename: FovControl.lua
 
 -- Changelog (1.0.0.1):
@@ -7,6 +7,9 @@
 
 -- Changelog (1.0.0.2):
 -- removed unnecessary code
+
+-- Changelog (1.0.0.3):
+-- fixed a problem with data compatibility with previous settings
 
 FovControl = {
   MOD_DIRECTORY = g_currentModDirectory,
@@ -17,37 +20,25 @@ source(FovControl.MOD_DIRECTORY .. "src/gui/FovControlGui.lua")
 
 local FovControl_mt = Class(FovControl)
 
----Creating FovControl instance
----@param gui table gui object
----@param l10n table l10n object
----@param settingsModel table settingsModel object
----@return table instance instance of object
 function FovControl.new(customMt, gui, l10n, settingsModel)
   local self = setmetatable({}, customMt or FovControl_mt)
 
-  self.gui = gui
-  self.l10n = l10n
-  self.settingsModel = settingsModel
   self.modifiedVehicles = {}
   self.fovControlGui = FovControlGui.new(nil, gui, l10n, settingsModel)
 
   return self
 end
 
----Initializing FovControl
 function FovControl:initialize()
   self:loadVehicleCameraFovFromXMLFile()
 
   self.fovControlGui:initialize()
 end
 
----Callback on map loading
----@param filename string map file path
 function FovControl:loadMap(filename)
   self.fovControlGui:loadMap()
 end
 
----Loading vehicle camera fov from xml file
 function FovControl:loadVehicleCameraFovFromXMLFile()
   local xmlFile = XMLFile.loadIfExists("FovControlXML", FovControl.MOD_SETTINGS_DIRECTORY .. "fovControl.xml", "vehicles")
 
@@ -61,9 +52,11 @@ function FovControl:loadVehicleCameraFovFromXMLFile()
         xmlFile:iterate(key .. ".cameras.camera", function (_, cameraKey)
           local cameraId = xmlFile:getInt(cameraKey .. "#id")
 
-          self.modifiedVehicles[xmlFilename][cameraId] = {
-            fov = xmlFile:getFloat(cameraKey .. "#fov")
-          }
+          if cameraId then
+            self.modifiedVehicles[xmlFilename][cameraId] = {
+              fov = xmlFile:getFloat(cameraKey .. "#fov")
+            }
+          end
         end)
       end
     end)
@@ -72,7 +65,6 @@ function FovControl:loadVehicleCameraFovFromXMLFile()
   end
 end
 
----Saving vehicle camera fov to xml file
 function FovControl:saveVehicleCameraFovToXMLFile()
   local xmlFile = XMLFile.create("FovControlXML", FovControl.MOD_SETTINGS_DIRECTORY .. "fovControl.xml", "vehicles")
 
@@ -96,7 +88,6 @@ function FovControl:saveVehicleCameraFovToXMLFile()
   end
 end
 
----Save vehicle camera fov
 function FovControl:saveVehicleCameraFov()
   local controlledVehicle = g_currentMission.controlledVehicle
 
@@ -117,17 +108,10 @@ function FovControl:saveVehicleCameraFov()
   self:saveVehicleCameraFovToXMLFile()
 end
 
----ToggleFovControl action event callback
----@param actionName string action name
----@param inputValue integer input value
----@param callbackState any callback state
----@param isAnalog boolean is analog
 function FovControl:actionEventToggleFovControl(actionName, inputValue, callbackState, isAnalog)
   g_gui:showDialog("FovControlDialog")
 end
 
----Gets controlled vehicle active camera fov
----@return float fov vehicle active camera fov
 function FovControl:getVehicleActiveCameraFov()
   local controlledVehicle = g_currentMission.controlledVehicle
 
@@ -142,8 +126,6 @@ function FovControl:getVehicleActiveCameraFov()
   return nil
 end
 
----Gets controlled vehicle active camera default fov
----@return float fov default fov of vehicle active camera or nil when not found
 function FovControl:getVehicleActiveCameraDefaultFov()
   local controlledVehicle = g_currentMission.controlledVehicle
 
@@ -192,8 +174,11 @@ local function onPostLoad(self, savegame)
   if modifiedVehicle ~= nil then
     for i = 1, #spec.cameras do
       local camera = spec.cameras[i]
+      local modifiedCamera = modifiedVehicle[i]
 
-      setFovY(camera.cameraNode, modifiedVehicle[i].fov)
+      if modifiedCamera then
+        setFovY(camera.cameraNode, modifiedCamera.fov)
+      end
     end
   end
 end
