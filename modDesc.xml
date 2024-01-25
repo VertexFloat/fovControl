@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="79">
   <author>VertexFloat</author>
-  <version>1.0.0.3</version>
+  <version>1.0.0.4</version>
   <title>
     <en>Fov Control</en>
     <de>Fov-Steuerung</de>
@@ -13,40 +13,32 @@
 
 Opening Fov Controller - key combination "left shift + z" (default)
 
-Changelog (1.0.0.3):
-- removed unnecessary code
-- descVersion updated
-- cleaned code
+Changelog (1.0.0.4):
+- fixed a problem with data compatibility with previous settings, from now on old data will be overwritten when saving new ones, unfortunately old data will be ignored when loading
 
 For more information, full changelog, help, and report issues please visit <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></en>
     <de><![CDATA[Dank dieser einfachen Modifikation können Sie das Sichtfeld für die aktuell verwendete Fahrzeugkamera einstellen.
 
 Öffnen des Fov-Controllers - Tastenkombination "linke Umschalttaste + z" (Standard)
 
-Änderungsprotokoll (1.0.0.3):
-- Unnötigen Code entfernt
-- descVersion aktualisiert
-- Bereinigter Code
+Änderungsprotokoll (1.0.0.4):
+- Ein Problem mit der Datenkompatibilität mit vorherigen Einstellungen wurde behoben. Von nun an werden alte Daten beim Speichern neuer Daten überschrieben. Leider werden alte Daten beim Laden ignoriert
 
 Weitere Informationen, ein vollständiges Änderungsprotokoll, Hilfe und das Melden von Problemen finden Sie unter <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></de>
     <fr><![CDATA[Grâce à cette simple modification, vous pouvez définir le champ de vision de la caméra du véhicule actuellement utilisée.
 
 Ouverture du contrôleur FOV - combinaison de touches "shift gauche + z" (par défaut)
 
-Journal des modifications (1.0.0.3):
-- supprimé le code inutile
-- descVersion mise à jour
-- code nettoyé
+Journal des modifications (1.0.0.4):
+- correction d'un problème de compatibilité des données avec les paramètres précédents, à partir de maintenant les anciennes données seront écrasées lors de l'enregistrement des nouvelles, malheureusement les anciennes données seront ignorées lors du chargement
 
 Pour plus d'informations, le journal des modifications complet, l'aide et signaler des problèmes, veuillez visiter <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></fr>
     <pl><![CDATA[Dzięki tej prostej modyfikacji, możesz ustawić pole widzenia dla aktualnie używanej kamery pojazdu.
 
 Otworzenie kontrolera pola widzenia - kombinacja klawiszy "lewy shift + z" (domyślnie)
 
-Dziennik zmian (1.0.0.3):
-- usunięto niepotrzebny kod
-- zaktualizowano descVersion
-- oczyszczono kod
+Dziennik zmian (1.0.0.4):
+- naprawiono problem ze zgodnością danych z poprzednimi ustawieniami, od teraz stare dane będą nadpisywane przy zapisywaniu nowych, niestety stare dane będą ignorowane przy ładowaniu
 
 Po więcej informacji, pełny dziennik zmian, pomoc lub zgłoszenie błędu, odwiedź stronę <a href="https://github.com/4c65736975/fovControl">GitHub</a>.]]></pl>
   </description>
@@ -73,7 +65,7 @@ Po więcej informacji, pełny dziennik zmian, pomoc lub zgłoszenie błędu, odw
       <pl>Usuń tło</pl>
     </text>
     <text name="action_openFovControl">
-      <en>Open fov control</en>
+      <en>Open Fov control</en>
       <de>Öffnen Sie die Fov-Steuerung</de>
       <fr>Ouvrir le contrôle Fov</fr>
       <pl>Otwórz kontroler pola widzenia</pl>
@@ -82,7 +74,7 @@ Po więcej informacji, pełny dziennik zmian, pomoc lub zgłoszenie błędu, odw
       <en>Open Fov control</en>
       <de>Öffnen Sie die Fov-Steuerung</de>
       <fr>Ouvrir le contrôle Fov</fr>
-      <pl>Otwórz kontrolę pola widzenia</pl>
+      <pl>Otwórz kontroler pola widzenia</pl>
     </text>
   </l10n>
 
@@ -93,7 +85,7 @@ Po więcej informacji, pełny dziennik zmian, pomoc lub zgłoszenie błędu, odw
   </inputBinding>
 
   <actions>
-    <action name="TOGGLE_FOV_CONTROL" category="VEHICLE" axisType="HALF"/>
+    <action name="TOGGLE_FOV_CONTROL" category="VEHICLE" axisType="FULL"/>
   </actions>
 
   <extraSourceFiles>

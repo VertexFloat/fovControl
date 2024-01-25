@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0.4
+
+Fix:
+
+- fixed a problem with data compatibility with previous settings
+
 ## 1.0.0.3
 
 Features:
