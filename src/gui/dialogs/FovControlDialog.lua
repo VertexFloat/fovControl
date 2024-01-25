@@ -18,10 +18,6 @@ FovControlDialog = {
 
 local FovControlDialog_mt = Class(FovControlDialog, MessageDialog)
 
----Creating FovControlDialog instance
----@param l10n table l10n object
----@param settingsModel table settingsModel object
----@return table instance instance of object
 function FovControlDialog.new(target, customMt, l10n, settingsModel)
   local self = MessageDialog.new(target, customMt or FovControlDialog_mt)
 
@@ -35,14 +31,12 @@ function FovControlDialog.new(target, customMt, l10n, settingsModel)
   return self
 end
 
----Callback on dialog open
 function FovControlDialog:onOpen()
   FovControlDialog:superClass().onOpen(self)
 
   self:updateValues()
 end
 
----Updating dialog values
 function FovControlDialog:updateValues()
   self.fovElement:setTexts(self.settingsModel:getFovYTexts())
 
@@ -52,8 +46,6 @@ function FovControlDialog:updateValues()
   self:setState(self.lastValidFovValue)
 end
 
----Set fov multi text option element state
----@param state float camera fov
 function FovControlDialog:setState(state)
   if state ~= nil then
     if self.settingsModel.fovYToIndexMapping[state] ~= nil then
@@ -64,33 +56,27 @@ function FovControlDialog:setState(state)
   end
 end
 
----Saving current vehicle camera fov
 function FovControlDialog:save()
   g_fovControl:saveVehicleCameraFov()
 end
 
----Callback on click fov value
----@param state integer fov multi text option element state
 function FovControlDialog:onClickFovValue(state)
   self.selectedFovValue = self.settingsModel.indexToFovYMapping[state]
 
   g_currentMission:consoleCommandSetFOV(self.selectedFovValue)
 end
 
----Callback on click apply
 function FovControlDialog:onClickApply()
   self:save()
   self:close()
 end
 
----Callback on click remove background
 function FovControlDialog:onClickRemoveBackground()
   self.bgElement:setVisible(not self.bgElement.visible)
 
   self.btnRemoveBgElement.text = not self.bgElement.visible and self.l10n:getText("button_addBackground"):upper() or self.l10n:getText("button_removeBackground"):upper()
 end
 
----Callback on click reset fov
 function FovControlDialog:onClickResetFov()
   local defaultFovValue = MathUtil.round(math.deg(g_fovControl:getVehicleActiveCameraDefaultFov()))
 
@@ -103,7 +89,6 @@ function FovControlDialog:onClickResetFov()
   g_currentMission:consoleCommandSetFOV(defaultFovValue)
 end
 
----Callback on click back
 function FovControlDialog:onClickBack()
   g_currentMission:consoleCommandSetFOV(self.lastValidFovValue)
 
